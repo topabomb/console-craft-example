@@ -1,6 +1,6 @@
 import { execa } from 'execa';
 import { cli } from 'console-craft';
-import { service } from './serve';
+import { service } from './serve.js';
 const commands = [
   { name: 'serve', args: [{ flags: '-p, --port <port>', default: 3000 }] },
   { name: 'test', args: ['-r, --round <round>'] },

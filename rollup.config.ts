@@ -5,7 +5,6 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esmShim from '@rollup/plugin-esm-shim';
 const isProduction = process.env.NODE_ENV === 'production';
-const extensions = ['.ts', '.mjs', '.js', '.json', '.node'];
 export default {
   input: ['./src/index.ts'],
   output: [
@@ -17,7 +16,7 @@ export default {
   plugins: [
     cleandir('./dist'),
     nodeResolve({
-      extensions,
+      extensions: ['.ts', '.mjs', '.js', '.json', '.node'],
       exportConditions: ['node'],
       preferBuiltins: false,
     }),

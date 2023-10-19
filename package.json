@@ -32,7 +32,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
-    "console-craft": "^1.0.1",
+    "console-craft": "^1.0.5",
     "cors": "^2.8.5",
     "execa": "^8.0.1",
     "moment-timezone": "^0.5.43",

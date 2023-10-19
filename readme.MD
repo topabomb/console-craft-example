@@ -1,5 +1,7 @@
 # console-craft-example
 
+This project is created by the [weero-template](https://github.com/topabomb/weero-template.js) tool, which serves as a scaffold for creating projects with various types of templates.
+
 > Example for [console-craft](https://github.com/topabomb/console-craft)
 
 [console-craft](https://github.com/topabomb/console-craft) is simplify console program development, standardize program parameters and log output, and provide support for user interaction or command-line parameters to start the main program and subcommands.
