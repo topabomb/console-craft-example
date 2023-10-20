@@ -4,6 +4,7 @@ import { cleandir } from 'rollup-plugin-cleandir';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import esmShim from '@rollup/plugin-esm-shim';
+import versionInjector from 'rollup-plugin-version-injector';
 const isProduction = process.env.NODE_ENV === 'production';
 export default {
   input: ['./src/index.ts'],
@@ -28,5 +29,13 @@ export default {
     }),
     json(),
     esmShim(),
+    versionInjector({
+      injectInComments: false,
+      injectInTags: {
+        fileRegexp: /\.(js|cjs)$/,
+        tagId: 'VI',
+        dateFormat: 'yyyy-mm-dd HH:MM',
+      },
+    }),
   ],
 };

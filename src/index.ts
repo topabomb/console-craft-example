@@ -9,6 +9,7 @@ cli.initialize(commands, {
   globalArgs: [{ flags: '-c, --config <config>', description: 'config file' }, '-log,  --log-level'],
   author: 'topabomb(hualei.hb@gmail.com)',
   description: 'node console app.',
+  version: '[VI]{version} - {date}[/VI]', //from rollup-plugin-version-injector
 });
 cli.command('serve', async ({ name, args, logger }) => {
   const port = Number(args['port']);
