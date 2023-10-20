@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nodemon --ext \".ts,.js\" --watch \"./src\"  --exec \"ts-node  ./src/index.ts",
     "dev:rollup": "rollup -c --configPlugin typescript -w --watch.onEnd=\"node ./dist/index.cjs\"",
-    "test": "mocha",
+    "mocha": "mocha",
+    "test": "ts-node  ./src/index.ts test",
     "build": "rimraf ./build && tsc",
     "dist": "npm run build &&cross-env NODE_ENV=production rollup -c --configPlugin typescript",
     "start:dev": "npm run build&& node --loader ts-node/esm build/src/index.js",

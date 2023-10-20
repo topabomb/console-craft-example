@@ -20,7 +20,7 @@ cli.command('serve', async ({ name, args, logger }) => {
 cli.command('test', async ({ name, args, logger }) => {
   await service.start(3000);
   const round = args['round'] ? Number(args['round']) : 1;
-  for (let i = 0; i < round; i++) await execa('npm', ['run', 'test']).pipeStdout(process.stdout);
+  for (let i = 0; i < round; i++) await execa('mocha', []).pipeStdout(process.stdout);
   await service.close();
   logger.log('test complete.');
 });
